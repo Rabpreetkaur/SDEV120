@@ -1,0 +1,37 @@
+Pseudocode Module 2 - Exercise 2 - Rabpreet
+Purpose: Design a program to determine a monthly checking account fee for Hometown Bank.
+
+START
+
+DECLARE accountBalance AS FLOAT
+
+DECLARE overdrawnFee, totalFee AS FLOAT
+
+DECLARE numOverdrawn AS INTEGER
+
+CONSTANT FEE_PERCENTAGE = 0.01
+
+CONSTANT BASE_FEE = 5.00
+
+PRINT "Enter the account balance: "
+
+INPUT accountBalance
+
+PRINT "Enter the number of times the account was overdrawn: "
+
+INPUT numOverdrawn
+
+SET overdrawnFee = (accountBalance * FEE_PERCENTAGE) - (numOverdrawn * BASE_FEE)
+
+SET totalFee = overdrawnFee
+
+SET accountBalance = accountBalance - totalFee
+
+PRINT "The total fee is: $", totalFee
+
+PRINT "The new account balance is: $", accountBalance
+
+PRINT "Thanks for using this program."
+
+END
+

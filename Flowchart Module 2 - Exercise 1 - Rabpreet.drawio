@@ -1,0 +1,82 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.5 Chrome/126.0.6478.183 Electron/31.3.0 Safari/537.36" version="24.7.5">
+  <diagram name="Page-1" id="eyMdJXIam6D9Z7WbKnDy">
+    <mxGraphModel dx="1234" dy="726" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="KT9h34zXvJoLfzuav7_D-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="KT9h34zXvJoLfzuav7_D-1" target="KT9h34zXvJoLfzuav7_D-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KT9h34zXvJoLfzuav7_D-1" value="Start" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="290" y="30" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="KT9h34zXvJoLfzuav7_D-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="KT9h34zXvJoLfzuav7_D-2" target="KT9h34zXvJoLfzuav7_D-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KT9h34zXvJoLfzuav7_D-2" value="Input: Customer&#39;s last name" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="290" y="200" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="KT9h34zXvJoLfzuav7_D-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="KT9h34zXvJoLfzuav7_D-4" target="KT9h34zXvJoLfzuav7_D-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KT9h34zXvJoLfzuav7_D-4" value="Input: Number of bathrooms" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="290" y="340" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="KT9h34zXvJoLfzuav7_D-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="KT9h34zXvJoLfzuav7_D-6" target="KT9h34zXvJoLfzuav7_D-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KT9h34zXvJoLfzuav7_D-6" value="Input: Number of other rooms" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="290" y="480" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="KT9h34zXvJoLfzuav7_D-11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="KT9h34zXvJoLfzuav7_D-8" target="KT9h34zXvJoLfzuav7_D-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KT9h34zXvJoLfzuav7_D-8" value="Calculate: Service Charge = $40 + ($15 per bathroom) + ($10 per other room)" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="290" y="620" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="KT9h34zXvJoLfzuav7_D-13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="KT9h34zXvJoLfzuav7_D-10" target="KT9h34zXvJoLfzuav7_D-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KT9h34zXvJoLfzuav7_D-10" value="Output: Customer&#39;s Name" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="290" y="760" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="KT9h34zXvJoLfzuav7_D-15" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="KT9h34zXvJoLfzuav7_D-12" target="KT9h34zXvJoLfzuav7_D-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KT9h34zXvJoLfzuav7_D-12" value="Output: Number of Bathrooms &amp;amp; Cost to Clean" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="290" y="900" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="KT9h34zXvJoLfzuav7_D-17" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="KT9h34zXvJoLfzuav7_D-14" target="KT9h34zXvJoLfzuav7_D-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KT9h34zXvJoLfzuav7_D-14" value="Output: Number of Other Rooms &amp;amp; Cost to Clean" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="290" y="1040" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="KT9h34zXvJoLfzuav7_D-19" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="KT9h34zXvJoLfzuav7_D-16" target="KT9h34zXvJoLfzuav7_D-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KT9h34zXvJoLfzuav7_D-16" value="Output: Number of Other Rooms &amp;amp; Cost to Clean" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="290" y="1180" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="KT9h34zXvJoLfzuav7_D-21" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="KT9h34zXvJoLfzuav7_D-18" target="KT9h34zXvJoLfzuav7_D-20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KT9h34zXvJoLfzuav7_D-18" value="Output: Total Cleaning Cost" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="290" y="1320" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="KT9h34zXvJoLfzuav7_D-23" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="KT9h34zXvJoLfzuav7_D-20" target="KT9h34zXvJoLfzuav7_D-22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KT9h34zXvJoLfzuav7_D-20" value="Display: Program Complete" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="290" y="1460" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="KT9h34zXvJoLfzuav7_D-22" value="End" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="290" y="1580" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="KT9h34zXvJoLfzuav7_D-24" value="Exercise 1: Hazel&#39;s Housecleaning Service Program" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry y="10" width="300" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

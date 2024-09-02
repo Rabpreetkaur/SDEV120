@@ -1,0 +1,38 @@
+Pseudocode Module 2 - Exercise 1 - Rabpreet
+Purpose: Design a program to calculate the refrigerator capacity in cubic feet for Wong's Appliances.
+
+START
+
+DECLARE refrigeratorModel AS STRING
+
+DECLARE heightInches, widthInches, depthInches AS FLOAT
+
+DECLARE cubicInches, cubicFeet AS FLOAT
+
+CONSTANT CUBIC_INCHES_PER_CUBIC_FOOT = 1728
+
+PRINT "Enter the refrigerator model name: "
+
+INPUT refrigeratorModel
+
+PRINT "Enter the interior height in inches: "
+
+INPUT heightInches
+
+PRINT "Enter the interior width in inches: "
+
+INPUT widthInches
+
+PRINT "Enter the interior depth in inches: "
+
+INPUT depthInches
+
+SET cubicInches = heightInches * widthInches * depthInches
+
+SET cubicFeet = cubicInches / CUBIC_INCHES_PER_CUBIC_FOOT
+
+PRINT "The refrigerator model ", refrigeratorModel, " has a capacity of ", cubicFeet, " cubic feet."
+
+END
+
+
