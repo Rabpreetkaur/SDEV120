@@ -1,0 +1,57 @@
+Errors Identified:
+Incorrect Variable Type for DEDUCTION: DEDUCTION should be a numeric value instead of a string. It's being used in arithmetic operations, so it needs to be declared as num.
+Missing Loop Structure: The while loop should be used to iterate over multiple employees until EOFNAME is entered, but the current while loop is incorrectly written to compare net pay.
+Misplaced Conditional Logic: The if condition is used improperly; it should be part of the overall loop structure, not as a single instance before calculating the pay.
+Use of while for a Single Check: A while loop is unnecessary for checking if the net pay is greater than 0. An if-else statement should be used instead.
+End of Input Loop: The loop to ask for the next employee name after each calculation is not properly structured.
+
+Corrected pseudocode:
+start
+    // Declarations
+    string name
+    num hours
+    num rate
+    num DEDUCTION = 45   // DEDUCTION should be a number, not a string
+    string EOFNAME = "ZZZ"
+    num gross
+    num net
+
+    // Input the first employee name
+    output "Enter first name or ", EOFNAME, " to quit"
+    input name
+
+    // Loop through each employee until the EOFNAME is entered
+    while name <> EOFNAME
+        // Input the hours worked and hourly rate for the employee
+        output "Enter hours worked for ", name
+        input hours
+        
+        output "Enter hourly rate for ", name
+        input rate
+        
+        // Calculate gross and net pay
+        gross = hours * rate
+        net = gross - DEDUCTION
+        
+        // Check if net pay is greater than zero
+        if net > 0 then
+            output "Net pay for ", name, " is ", net
+        else
+            output "Deductions not covered. Net is 0."
+        endif
+
+        // Input the next employee name or quit
+        output "Enter next name or ", EOFNAME, " to quit"
+        input name
+    endwhile
+    
+    // End the program
+    output "End of job"
+stop
+
+
+Explanation of Corrections:
+Changed DEDUCTION to Numeric: The variable DEDUCTION was changed from a string to a numeric type (num) since it's involved in arithmetic operations.
+Replaced while Loop with if-else: The while loop checking if net > 0 was replaced by an if-else statement, which is more appropriate for this single comparison.
+Added Loop to Process Multiple Employees: A while loop was introduced to allow the program to process multiple employees, checking for EOFNAME to exit the loop.
+Consistent Input/Output Flow: Ensured that the input/output flow asks for the employee's details, calculates their pay, and then proceeds to the next employee or exits if EOFNAME is entered.

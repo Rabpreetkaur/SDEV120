@@ -1,0 +1,86 @@
+Question 1: You have been tasked with reviewing and updating this program. What steps would you take to identify any issues in the code?
+Response:
+
+Review Variable Declarations: Ensure that all declared variables are initialized and correctly named (e.g., firstTest, secondTest, average, PASSING). Verify that all variables are used appropriately throughout the program.
+
+Check for Missing Input Statements: The code is prompting the user to "Enter first score or 0 to quit" but does not capture the input for firstTest at that point. The program needs an input statement to assign the user's value to firstTest. I'll add the following line:
+
+pseudocode
+Copy code
+input firstTest
+Verify While Loop Condition: Check that the condition of the while loop is logical. The loop should continue while firstTest <> 0. I'll also change "not equal to" to <> to improve clarity and consistency in the pseudocode.
+
+Correct Arithmetic Operation: Ensure the calculation of the average is correct. In the line:
+
+pseudocode
+Copy code
+average = firstTest + secondTest / 2
+The division has precedence over addition. I'll add parentheses to ensure proper order of operations:
+
+pseudocode
+Copy code
+average = (firstTest + secondTest) / 2
+Ensure Proper Loop Execution: After outputting the result (either "Pass" or "Fail"), prompt the user again for the next firstTest score or 0 to quit. This requires adding:
+
+pseudocode
+Copy code
+input firstTest
+Review Output Statements: Ensure all outputs are correctly formatted and spelled (e.g., output is misspelled as ouput).
+
+Question 2: What actions could the developer have taken to minimize the number of errors?
+Response:
+
+Input Validation: The developer should have included validation for the inputs to ensure that the values for firstTest and secondTest are valid numeric values.
+
+Thorough Testing and Debugging: Running tests to check common edge cases (e.g., entering a value of 0 to ensure the program exits, or inputting values below and above the PASSING threshold) could help prevent logical errors.
+
+Proper Use of Parentheses: The developer should have used parentheses in arithmetic operations to ensure correct precedence, especially in the case of mixing addition and division.
+
+Clear Documentation: Including comments and meaningful variable names would make the code easier to understand and debug in the future.
+
+Consistent Pseudocode Formatting: The developer should have used consistent symbols (e.g., <> instead of "not equal") to enhance readability and uniformity in the pseudocode.
+
+Debugging Exercise - Corrected Pseudocode
+pseudocode
+Copy code
+start
+    // Declarations
+    num firstTest
+    num secondTest
+    num average
+    num PASSING = 60
+
+    // Prompt the user to enter the first score or 0 to quit
+    output "Enter first score or 0 to quit"
+    input firstTest
+
+    // Loop while firstTest is not equal to 0
+    while firstTest <> 0
+        output "Enter second score"
+        input secondTest
+
+        // Calculate the average of the two test scores
+        average = (firstTest + secondTest) / 2
+
+        // Output the average score
+        output "Average is ", average
+
+        // Check if the average is greater than or equal to PASSING
+        if average >= PASSING then
+            output "Pass"
+        else
+            output "Fail"
+        endif
+
+        // Prompt the user to enter the next first score or 0 to quit
+        output "Enter first score or 0 to quit"
+        input firstTest
+    endwhile
+
+stop
+Explanation of Corrections:
+Added Input for firstTest: Before entering the loop, I added an input statement to capture the user's first score.
+Fixed while Loop Condition: Changed "not equal to" to <> for consistency and clarity.
+Corrected the Arithmetic Operation: Added parentheses around the sum of firstTest and secondTest to ensure the addition is performed before the division.
+Spelling Corrections: Fixed the typo in the output statement (changed ouput to output).
+Ensured Loop Continuity: Added the input prompt for firstTest within the loop to allow multiple rounds of score entries.
