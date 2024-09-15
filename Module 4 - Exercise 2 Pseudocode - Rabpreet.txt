@@ -1,0 +1,21 @@
+start
+   Declare wordToFind as "logic" (or any other word)
+   Declare currentWord as string
+   Declare found as boolean = false
+
+   Output "Start looking up the word in the dictionary."
+
+   while found is false
+      Open dictionary to random page
+      Input currentWord (this would simulate looking at the word on the page)
+      
+      if currentWord is equal to wordToFind then
+         Output "You found the word: ", wordToFind
+         Set found to true
+      else if currentWord comes alphabetically before wordToFind then
+         Output "Flip forward."
+      else
+         Output "Flip backward."
+      endif
+   endwhile
+stop

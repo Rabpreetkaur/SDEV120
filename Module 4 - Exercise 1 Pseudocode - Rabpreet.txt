@@ -1,0 +1,20 @@
+start
+   Declare correctNumber as 47 (you can choose any number)
+   Declare guess as integer
+   Declare attempts as integer = 0
+
+   Output "Guess a number between 1 and 100"
+
+   while guess is not equal to correctNumber
+      Input guess
+      Increment attempts by 1
+      
+      if guess is greater than correctNumber then
+         Output "Your guess is too high. Try again."
+      else if guess is less than correctNumber then
+         Output "Your guess is too low. Try again."
+      else
+         Output "Congratulations! You guessed the correct number in ", attempts, " attempts."
+      endif
+   endwhile
+stop
