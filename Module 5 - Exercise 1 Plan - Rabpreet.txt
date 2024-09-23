@@ -1,0 +1,52 @@
+Exercise 1 - Planning
+1. Number of Questions:
+
+Total Questions: Decide on a fixed number of questions, such as 10. This allows for a manageable game length and helps maintain player interest.
+Categories: You might also consider categorizing questions (e.g., History, Science, Pop Culture) to make the game more engaging.
+
+2. Timing Constraints:
+
+Time Limit: Set a specific time limit for answering each question, such as 30 seconds. This adds an element of pressure and excitement.
+Countdown Mechanism: Implement a countdown timer that visually shows how much time is left for the player to respond.
+
+3. Expected Correct Answers:
+
+Response Format: Ensure all answers are phrased in the form of a question. For example, for the answer “The capital of France,” the player should respond with “What is Paris?”
+Feedback Mechanism: Provide immediate feedback after each answer, indicating whether it was correct or incorrect.
+
+4. Roles:
+
+Contestant: The player who answers the questions.
+Moderator: The person who reads the questions, tracks scores, and manages the flow of the game.
+
+5. Scoring System:
+
+Points Allocation:
+Award points for correct answers (e.g., +100 points).
+Deduct points for incorrect answers or for failing to respond within the time limit (e.g., -50 points).
+Score Tracking: Maintain a running total of each player’s score throughout the game.
+
+6. Game Flow:
+
+Turn Structure: Decide if players will take turns answering questions or if it will be a single contestant format.
+Multiple Rounds: Consider incorporating multiple rounds with increasing difficulty or different categories.
+Ending the Game: Plan how the game will conclude, such as after all questions have been answered or after a set time limit.
+Example Plan Outline
+Start Game:
+
+Initialize player scores (set all to zero).
+Prepare a list of questions and corresponding correct answers.
+Game Loop:
+
+For each question:
+Display the question to the player.
+Start the timer.
+Capture the player's response.
+Validate the response:
+If correct, increase the score.
+If incorrect or time runs out, reveal the correct answer.
+
+End Game:
+
+Display the final score and congratulate the player.
+Prompt the player to see if they want to play again.
