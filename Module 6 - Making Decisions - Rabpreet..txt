@@ -1,0 +1,171 @@
+Scenario 1: Collect and Display Customer Data with Monthly Bill (Before and After Taxes)
+
+WHILE True
+    // Collect customer data
+    PROMPT "Enter area code (3 digits):"
+    areaCode = INPUT
+    PROMPT "Enter phone number (7 digits):"
+    phoneNumber = INPUT
+    PROMPT "Enter the total number of text messages sent:"
+    numMessages = INPUT
+
+    // Base fee
+    baseFee = 5.00
+
+    // Calculate charges for messages after 100
+    IF numMessages > 100 AND numMessages <= 300 THEN
+        additionalFee = (numMessages - 100) * 0.03
+    ELSE IF numMessages > 300 THEN
+        additionalFee = (300 - 100) * 0.03 + (numMessages - 300) * 0.02
+    ELSE
+        additionalFee = 0
+    ENDIF
+
+    // Calculate total charges before taxes
+    totalBillBeforeTax = baseFee + additionalFee
+
+    // Apply tax
+    tax = totalBillBeforeTax * 0.14
+    totalBillAfterTax = totalBillBeforeTax + tax
+
+    // Display customer data and bills
+    DISPLAY "Customer Area Code: " + areaCode
+    DISPLAY "Customer Phone Number: " + phoneNumber
+    DISPLAY "Total Messages Sent: " + numMessages
+    DISPLAY "Total Bill Before Taxes: $" + totalBillBeforeTax
+    DISPLAY "Total Bill After Taxes: $" + totalBillAfterTax
+
+    // Ask if the user wants to continue or exit
+    PROMPT "Do you want to enter data for another customer? (yes/no):"
+    choice = INPUT
+    IF choice == "no" THEN
+        BREAK
+    ENDIF
+END WHILE
+
+
+Scenario 2: Display Data Only for Customers Who Sent Over 100 Messages
+
+WHILE True
+    // Collect customer data
+    PROMPT "Enter area code (3 digits):"
+    areaCode = INPUT
+    PROMPT "Enter phone number (7 digits):"
+    phoneNumber = INPUT
+    PROMPT "Enter the total number of text messages sent:"
+    numMessages = INPUT
+
+    IF numMessages > 100 THEN
+        // Calculate charges (same as above)
+        baseFee = 5.00
+        IF numMessages > 100 AND numMessages <= 300 THEN
+            additionalFee = (numMessages - 100) * 0.03
+        ELSE IF numMessages > 300 THEN
+            additionalFee = (300 - 100) * 0.03 + (numMessages - 300) * 0.02
+        ELSE
+            additionalFee = 0
+        ENDIF
+
+        totalBillBeforeTax = baseFee + additionalFee
+        tax = totalBillBeforeTax * 0.14
+        totalBillAfterTax = totalBillBeforeTax + tax
+
+        // Display data and bills
+        DISPLAY "Customer Area Code: " + areaCode
+        DISPLAY "Customer Phone Number: " + phoneNumber
+        DISPLAY "Total Messages Sent: " + numMessages
+        DISPLAY "Total Bill Before Taxes: $" + totalBillBeforeTax
+        DISPLAY "Total Bill After Taxes: $" + totalBillAfterTax
+    ENDIF
+
+    PROMPT "Do you want to enter data for another customer? (yes/no):"
+    choice = INPUT
+    IF choice == "no" THEN
+        BREAK
+    ENDIF
+END WHILE
+
+Scenario 3: Display Data Only for Customers with Bill Over $10 (After Taxes)
+
+WHILE True
+    // Collect customer data
+    PROMPT "Enter area code (3 digits):"
+    areaCode = INPUT
+    PROMPT "Enter phone number (7 digits):"
+    phoneNumber = INPUT
+    PROMPT "Enter the total number of text messages sent:"
+    numMessages = INPUT
+
+    // Calculate charges (same as previous)
+    baseFee = 5.00
+    IF numMessages > 100 AND numMessages <= 300 THEN
+        additionalFee = (numMessages - 100) * 0.03
+    ELSE IF numMessages > 300 THEN
+        additionalFee = (300 - 100) * 0.03 + (numMessages - 300) * 0.02
+    ELSE
+        additionalFee = 0
+    ENDIF
+
+    totalBillBeforeTax = baseFee + additionalFee
+    tax = totalBillBeforeTax * 0.14
+    totalBillAfterTax = totalBillBeforeTax + tax
+
+    IF totalBillAfterTax > 10 THEN
+        // Display data and bills
+        DISPLAY "Customer Area Code: " + areaCode
+        DISPLAY "Customer Phone Number: " + phoneNumber
+        DISPLAY "Total Messages Sent: " + numMessages
+        DISPLAY "Total Bill Before Taxes: $" + totalBillBeforeTax
+        DISPLAY "Total Bill After Taxes: $" + totalBillAfterTax
+    ENDIF
+
+    PROMPT "Do you want to enter data for another customer? (yes/no):"
+    choice = INPUT
+    IF choice == "no" THEN
+        BREAK
+    ENDIF
+END WHILE
+
+Scenario 4: Filter by Area Code
+
+PROMPT "Enter area code to filter by (3 digits):"
+filterAreaCode = INPUT
+
+WHILE True
+    // Collect customer data
+    PROMPT "Enter area code (3 digits):"
+    areaCode = INPUT
+    PROMPT "Enter phone number (7 digits):"
+    phoneNumber = INPUT
+    PROMPT "Enter the total number of text messages sent:"
+    numMessages = INPUT
+
+    IF areaCode == filterAreaCode THEN
+        // Calculate charges (same as previous)
+        baseFee = 5.00
+        IF numMessages > 100 AND numMessages <= 300 THEN
+            additionalFee = (numMessages - 100) * 0.03
+        ELSE IF numMessages > 300 THEN
+            additionalFee = (300 - 100) * 0.03 + (numMessages - 300) * 0.02
+        ELSE
+            additionalFee = 0
+        ENDIF
+
+        totalBillBeforeTax = baseFee + additionalFee
+        tax = totalBillBeforeTax * 0.14
+        totalBillAfterTax = totalBillBeforeTax + tax
+
+        // Display data and bills
+        DISPLAY "Customer Area Code: " + areaCode
+        DISPLAY "Customer Phone Number: " + phoneNumber
+        DISPLAY "Total Messages Sent: " + numMessages
+        DISPLAY "Total Bill Before Taxes: $" + totalBillBeforeTax
+        DISPLAY "Total Bill After Taxes: $" + totalBillAfterTax
+    ENDIF
+
+    PROMPT "Do you want to enter data for another customer? (yes/no):"
+    choice = INPUT
+    IF choice == "no" THEN
+        BREAK
+    ENDIF
+END WHILE
