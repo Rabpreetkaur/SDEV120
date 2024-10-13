@@ -1,0 +1,95 @@
+// Exercise 2: Merging Fundraising Contributions for Littleville High School
+
+start
+
+// Declarations
+string roomAName
+num roomAValue
+string roomBName
+num roomBValue
+string bothFilesDone = "N"
+num HIGH_VALUE = 999999
+InputFile roomAFile
+InputFile roomBFile
+OutputFile mergedFile
+
+// Prepare files for processing
+getReady()
+
+// Loop until both input files are processed
+while bothFilesDone = "N" do
+    detailLoop()
+end while
+
+// Finish processing
+allDone()
+stop
+
+// Function to prepare files for reading
+getReady()
+    // Open input and output files
+    open roomAFile "roomAFile.dat"
+    open roomBFile "roomBFile.dat"
+    open mergedFile "mergedFile.dat"
+
+    // Read initial records from both files
+    readA()
+    readB()
+    checkBoth()
+return
+
+// Function to read a record from room A
+readA()
+    input roomAName, roomAValue from roomAFile
+    if eof(roomAFile) then
+        roomAValue = HIGH_VALUE // Assign HIGH_VALUE if EOF is reached
+    endif
+return
+
+// Function to read a record from room B
+readB()
+    input roomBName, roomBValue from roomBFile
+    if eof(roomBFile) then
+        roomBValue = HIGH_VALUE // Assign HIGH_VALUE if EOF is reached
+    endif
+return
+
+// Function to check both files' EOF status
+checkBoth()
+    if roomAValue = HIGH_VALUE AND roomBValue = HIGH_VALUE then
+        bothFilesDone = "Y" // Set flag if both files are done
+    endif
+return
+
+// Function to merge contributions from both rooms
+detailLoop()
+    if roomAValue > roomBValue then
+        // Output record from room B to the merged file
+        output roomBName, roomBValue to mergedFile
+        readA() // Read the next record from room A
+    else
+        // Output record from room A to the merged file
+        output roomAName, roomAValue to mergedFile
+        readB() // Read the next record from room B
+    endif
+return
+
+// Function to close files after processing
+allDone()
+    close roomAFile
+    close roomBFile
+    close mergedFile
+return
+
+
+Key Corrections and Improvements-
+
+Initialization of Loop: The loop checks if bothFilesDone is "N" to continue processing until both files are completely read.
+
+EOF Handling: Added checks for end-of-file (EOF) conditions immediately after reading from each file. If EOF is reached, the corresponding value is set to HIGH_VALUE, allowing proper comparison.
+
+Function Naming: Used clear and descriptive function names (readA, readB, checkBoth, detailLoop, allDone) for better understanding and maintainability.
+
+File Handling: Ensured the merged file is declared as an output file and that the closing operation is done correctly.
+
+Documentation: Included comments throughout the pseudocode to clarify the purpose of each section, enhancing readability and maintainability.

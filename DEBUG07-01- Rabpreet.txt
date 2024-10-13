@@ -1,0 +1,97 @@
+// Exercise 2: Merging Sales Records for Pardeeville New and Used Auto Dealership
+
+start
+
+// Declarations
+string newSalesperson
+num newAmount
+string usedSalesperson
+num usedAmount
+string bothAtEof = "N"
+string HIGH_NAME = "ZZZZZ"
+InputFile newSales
+InputFile usedSales
+OutputFile allSales
+
+// Prepare files for processing
+getReady()
+
+// Loop until both input files reach EOF
+while bothAtEof = "N" do
+    detailLoop()
+end while
+
+// Finish processing
+finish()
+stop
+
+// Function to prepare files for reading
+getReady()
+    // Open input and output files
+    open newSales "NewSales.dat"
+    open usedSales "UsedSales.dat"
+    open allSales "AllSales.dat"
+    
+    // Read initial records from both files
+    input newSalesperson, newAmount from newSales
+    if eof(newSales) then
+        usedSalesperson = HIGH_NAME
+    endif
+
+    input usedSalesperson, usedAmount from usedSales
+    if eof(usedSales) then
+        usedSalesperson = HIGH_NAME
+    endif
+
+    // Check if both files are at EOF
+    if newSalesperson = HIGH_NAME AND usedSalesperson = HIGH_NAME then
+        bothAtEof = "Y"
+    endif
+return
+
+// Function to process the details of sales records
+detailLoop()
+    // Compare salesperson names and output records to the allSales file
+    if newSalesperson > usedSalesperson then
+        // Output used sales record
+        output usedSalesperson, usedAmount to allSales
+        input usedSalesperson, usedAmount from usedSales
+        if eof(usedSales) then
+            usedSalesperson = HIGH_NAME
+        endif
+    else
+        // Output new sales record
+        output newSalesperson, newAmount to allSales
+        input newSalesperson, newAmount from newSales
+        if eof(newSales) then
+            newSalesperson = HIGH_NAME
+        endif
+    endif
+
+    // Check if both files are at EOF after output
+    if newSalesperson = HIGH_NAME AND usedSalesperson = HIGH_NAME then
+        bothAtEof = "Y"
+    endif
+return
+
+// Function to close files after processing
+finish()
+    close newSales
+    close usedSales
+    close allSales
+return
+
+
+Key Corrections and Improvements-
+
+Initialization: Changed the while loop condition from bothAtEof = "Y" to bothAtEof = "N" to ensure the loop continues until both files have been processed.
+
+EOF Checks: Added checks for end-of-file (EOF) conditions immediately after attempting to read from the sales files. This ensures that the program correctly identifies when a file has been completely read.
+
+Consistent Naming: Ensured consistent naming for variables (e.g., using usedSalesperson and usedAmount).
+
+Control Structures: Enhanced readability by clearly separating the getReady, detailLoop, and finish functions.
+
+Comments: Included comments throughout the pseudocode to clarify the purpose of each section, improving understanding and maintainability.
+
+Return Statements: Ensured proper return statements are present at the end of functions, indicating the end of each section logically.

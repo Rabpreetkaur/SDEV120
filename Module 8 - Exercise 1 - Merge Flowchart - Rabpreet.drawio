@@ -1,0 +1,73 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.5 Chrome/126.0.6478.183 Electron/31.3.0 Safari/537.36" version="24.7.5">
+  <diagram name="Page-1" id="0h7SnWqki2PQIkUtQYF4">
+    <mxGraphModel dx="864" dy="508" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Y1ITB5HsGnN-7jS9ZEmu-8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="Y1ITB5HsGnN-7jS9ZEmu-1" target="Y1ITB5HsGnN-7jS9ZEmu-7" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Y1ITB5HsGnN-7jS9ZEmu-1" value="Start" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="60" y="40" width="120" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="Y1ITB5HsGnN-7jS9ZEmu-10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="Y1ITB5HsGnN-7jS9ZEmu-7" target="Y1ITB5HsGnN-7jS9ZEmu-9" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Y1ITB5HsGnN-7jS9ZEmu-7" value="Declare files" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="60" y="170" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Y1ITB5HsGnN-7jS9ZEmu-12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="Y1ITB5HsGnN-7jS9ZEmu-9" target="Y1ITB5HsGnN-7jS9ZEmu-11" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Y1ITB5HsGnN-7jS9ZEmu-9" value="Open files" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" parent="1" vertex="1">
+          <mxGeometry x="60" y="290" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Y1ITB5HsGnN-7jS9ZEmu-14" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="Y1ITB5HsGnN-7jS9ZEmu-11" target="Y1ITB5HsGnN-7jS9ZEmu-13" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Y1ITB5HsGnN-7jS9ZEmu-11" value="Read records" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" parent="1" vertex="1">
+          <mxGeometry x="60" y="410" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Y1ITB5HsGnN-7jS9ZEmu-16" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="Y1ITB5HsGnN-7jS9ZEmu-13" target="Y1ITB5HsGnN-7jS9ZEmu-15" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Y1ITB5HsGnN-7jS9ZEmu-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="Y1ITB5HsGnN-7jS9ZEmu-13" target="Y1ITB5HsGnN-7jS9ZEmu-24" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="170" y="670" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="210" y="595" />
+              <mxPoint x="210" y="680" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Y1ITB5HsGnN-7jS9ZEmu-26" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="Y1ITB5HsGnN-7jS9ZEmu-13" target="Y1ITB5HsGnN-7jS9ZEmu-21" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Y1ITB5HsGnN-7jS9ZEmu-13" value="Decision (compare customer numbers)" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="62.5" y="540" width="115" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="Y1ITB5HsGnN-7jS9ZEmu-18" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="Y1ITB5HsGnN-7jS9ZEmu-15" target="Y1ITB5HsGnN-7jS9ZEmu-17" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Y1ITB5HsGnN-7jS9ZEmu-15" value="Check Remaining Records" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="80" y="720" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="Y1ITB5HsGnN-7jS9ZEmu-20" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="Y1ITB5HsGnN-7jS9ZEmu-17" target="Y1ITB5HsGnN-7jS9ZEmu-19" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Y1ITB5HsGnN-7jS9ZEmu-17" value="Close Files" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" parent="1" vertex="1">
+          <mxGeometry x="60" y="830" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Y1ITB5HsGnN-7jS9ZEmu-19" value="End&amp;nbsp;" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="60" y="930" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="Y1ITB5HsGnN-7jS9ZEmu-21" value="YES- Write Geraldine&#39;s record to Unified file" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" parent="1" vertex="1">
+          <mxGeometry x="250" y="510" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Y1ITB5HsGnN-7jS9ZEmu-24" value="NO&lt;span style=&quot;background-color: initial;&quot;&gt;: Is Gerard&#39;s Number &amp;lt; Geraldine&#39;s?&lt;/span&gt;" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="250" y="630" width="120" height="80" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

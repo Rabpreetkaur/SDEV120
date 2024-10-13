@@ -1,0 +1,49 @@
+Test Case 1: Both files contain unique customer numbers.
+
+Input: GeraldinesBusinesses.csv
+1001,John Doe,123 Main St,2000
+1002,Jane Smith,456 Elm St,1500
+
+GerardsBusinesses.csv
+1003,Mark Johnson,789 Oak St,2500
+1004,Susan Lee,101 Pine St,1800
+
+Expected Output:
+MergedCustomers.csv
+1001,John Doe,123 Main St,2000
+1002,Jane Smith,456 Elm St,1500
+1003,Mark Johnson,789 Oak St,2500
+1004,Susan Lee,101 Pine St,1800
+
+Test Case 2: Both files contain some duplicate customer numbers.
+
+Input:
+GeraldinesBusinesses.csv
+1001,John Doe,123 Main St,2000
+1003,Mark Johnson,789 Oak St,2500
+
+GerardsBusinesses.csv
+1002,Jane Smith,456 Elm St,1500
+1003,Mark Johnson,789 Oak St,2500
+
+Expected Output:
+MergedCustomers.csv
+1001,John Doe,123 Main St,2000
+1002,Jane Smith,456 Elm St,1500
+1003,Mark Johnson,789 Oak St,2500
+
+Test Case 3: One file is empty.
+
+Input:
+GeraldinesBusinesses.csv
+(empty)
+
+GerardsBusinesses.csv
+1001,John Doe,123 Main St,2000
+1002,Jane Smith,456 Elm St,1500
+
+Expected Output:
+MergedCustomers.csv
+1001,John Doe,123 Main St,2000
+1002,Jane Smith,456 Elm St,1500
+

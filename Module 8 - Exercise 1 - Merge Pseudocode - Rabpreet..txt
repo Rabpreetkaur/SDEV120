@@ -1,0 +1,91 @@
+// Exercise 1: Merging Customer Records for Geraldine's Landscaping Service and Gerard's Landscaping Service
+
+start
+
+// Declarations
+string geraldineCustNum
+string geraldineLastName
+string geraldineAddress
+num geraldinePropertySize
+string gerardCustNum
+string gerardLastName
+string gerardAddress
+num gerardPropertySize
+string bothAtEOF = "N"
+num HIGH_CUST_NUM = "ZZZZZ" // Using a high value for comparison
+InputFile geraldinesFile
+InputFile gerardsFile
+OutputFile mergedFile
+
+// Prepare files for processing
+getReady()
+
+// Loop until both input files are processed
+while bothAtEOF = "N" do
+    detailLoop()
+end while
+
+// Finish processing
+allDone()
+stop
+
+// Function to prepare files for reading
+getReady()
+    // Open input and output files
+    open geraldinesFile "GeraldinesBusinesses.csv"
+    open gerardsFile "GerardsBusinesses.csv"
+    open mergedFile "MergedCustomers.csv"
+
+    // Read initial records from both files
+    readGeraldines()
+    readGerards()
+    checkBoth()
+return
+
+// Function to read a record from Geraldine's file
+readGeraldines()
+    input geraldineCustNum, geraldineLastName, geraldineAddress, geraldinePropertySize from geraldinesFile
+    if eof(geraldinesFile) then
+        geraldineCustNum = HIGH_CUST_NUM // Assign HIGH_CUST_NUM if EOF is reached
+    endif
+return
+
+// Function to read a record from Gerard's file
+readGerards()
+    input gerardCustNum, gerardLastName, gerardAddress, gerardPropertySize from gerardsFile
+    if eof(gerardsFile) then
+        gerardCustNum = HIGH_CUST_NUM // Assign HIGH_CUST_NUM if EOF is reached
+    endif
+return
+
+// Function to check both files' EOF status
+checkBoth()
+    if geraldineCustNum = HIGH_CUST_NUM AND gerardCustNum = HIGH_CUST_NUM then
+        bothAtEOF = "Y" // Set flag if both files are done
+    endif
+return
+
+// Function to merge customer records from both rooms
+detailLoop()
+    if geraldineCustNum < gerardCustNum then
+        // Output record from Geraldine's file to the merged file
+        output geraldineCustNum, geraldineLastName, geraldineAddress, geraldinePropertySize to mergedFile
+        readGeraldines() // Read the next record from Geraldine's file
+    else if gerardCustNum < geraldineCustNum then
+        // Output record from Gerard's file to the merged file
+        output gerardCustNum, gerardLastName, gerardAddress, gerardPropertySize to mergedFile
+        readGerards() // Read the next record from Gerard's file
+    else
+        // If customer numbers are equal, output one and read the next from both files
+        output geraldineCustNum, geraldineLastName, geraldineAddress, geraldinePropertySize to mergedFile
+        readGeraldines()
+        readGerards()
+    endif
+return
+
+// Function to close files after processing
+allDone()
+    close geraldinesFile
+    close gerardsFile
+    close mergedFile
+return
